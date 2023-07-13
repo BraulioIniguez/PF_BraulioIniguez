@@ -1,0 +1,175 @@
+
+/***********  MEDINA RESPONSIVAS  ****************/
+/* ----------------------------------------------*/
+/* ESCRITORIOS MUY GRANDES */
+/*-----------------------------------------------*/
+@media (min-width: 1200px) {
+    .contact_form{
+        width: 40%;
+    }
+    .footer .social-network{
+        text-align: center;
+    }
+    .footer .social-network{
+        grid-template-areas: social-network;
+        font-size: 1.3em;
+
+    }
+    .footer .social-network .fa-facebook {
+       margin-right: 15px;
+       
+    }
+
+    .footer .social-network .fa-facebook:hover{
+        color: blue;
+        font-size: 33px;
+        transition: .1s;
+     }
+     .footer .social-network .fa-facebook::before{
+        transition: .5s;
+     }
+     .footer .social-network .fa-twitter{
+        margin-right: 15px;
+     }
+     .footer .social-network .fa-twitter:hover{
+        font-size: 33px;
+        color: deepskyblue;
+        transition: .3s;
+     }
+     .footer .social-network .fa-twitter::before{
+        transition: .4s;
+     }
+     .footer .social-network .fa-instagram:hover{
+        font-size: 38px;
+        color: rgb(163, 57, 137);
+        transition: .3s;
+     }
+}
+
+/* Tablets en horizontal y escritorio normales
+---------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .contact_form{
+        width: 65%;
+    }
+    .hero .info-content{
+        grid-column: 7 / 10;
+        grid-row: 2 / 9 ;
+        }
+   
+}
+
+/* Moviles en horizontal o tables en vertical
+----------------------------------------------- */
+@media (max-width: 767px){
+    .contact_form{
+        width: 80%;
+   
+    }
+    .hero .info-content{
+        grid-column: 7 / 10;
+        grid-row: 2 / 9 ;
+        }
+        .hero h3{
+            font-size: 1.5em;
+        }
+        .hero h1{
+            font-size: 3.9em;
+        }
+        .hero p{
+            font-size:.8em;
+        }
+        .footer .follow-me{
+            display: none;
+        }
+
+        .footer .social-network{
+            text-align: center;
+        }
+        .footer .social-network{
+            grid-template-areas: social-network;
+            font-size: 1.3em;
+
+        }
+        .footer .social-network .fa-facebook {
+           margin-right: 15px;
+           
+        }
+
+        .footer .social-network .fa-facebook:hover{
+            color: blue;
+            font-size: 38px;
+         }
+         .footer .social-network .fa-twitter{
+            margin-right: 15px;
+         }
+         .footer .social-network .fa-twitter:hover{
+            font-size: 38px;
+            color: deepskyblue;
+         }
+         .footer .social-network .fa-instagram:hover{
+            font-size: 38px;
+            color: rgb(163, 57, 137);
+         }
+    
+}
+
+/* Moviles en vertical
+------------------------------------------------- */
+@media (max-width: 480px){
+    .contact_form{
+        width: 90%;
+    }
+}
+/* *****  Responsive de index 'section main'*/
+/* ------------------ */
+@media (max-width: 600px)  {
+    .hero .info-content{
+        grid-column: 5 / 10;
+        grid-row: 2 / 9 ;
+        }
+        .hero h3{
+            font-size: 1.1em;
+        }
+        .hero h1{
+            font-size: 3.5em;
+        }
+        .hero p{
+            font-size:.8em;
+        }
+        /* ********************************* */
+
+        .footer .follow-me{
+            display: none;
+        }
+
+        .footer .social-network{
+            text-align: center;
+        }
+        .footer .social-network{
+            grid-template-areas: social-network;
+            font-size: 1.3em;
+
+        }
+        .footer .social-network .fa-facebook {
+           margin-right: 11px;
+           
+        }
+
+        .footer .social-network .fa-facebook:hover{
+            color: blue;
+            font-size: 33px;
+         }
+         .footer .social-network .fa-twitter{
+            margin-right: 11px;
+         }
+         .footer .social-network .fa-twitter:hover{
+            font-size: 33px;
+            color: deepskyblue;
+         }
+         .footer .social-network .fa-instagram:hover{
+            font-size: 33px;
+            color: rgb(163, 57, 137);
+         }
+ 
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/cd83d4d5fc.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200&family=Roboto:wght@300& display=swap" rel="stylesheet">
+    <!-- css  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="./img/logo_icon.ico">
+    <title>Inicio</title>
+</head>
+<body>
+    <!-- inicio de cabecera container flex border -->
+    <header class="cabecera">
+        <!-- logo -->
+        <div class="logo">
+            <img src="img/logo.png" alt="logo_Principal">
+        </div>
+        <!-- ***********   INICIA EL MENU ******-->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" style="color: #ffbc0e;">Inicio</a></li>
+                <li><a href="pages/conoceme.html">Conoceme</a></li>
+                <li><a href="pages/trabajos.html">Trabajos</a></li>
+                <!-- <li><a href="pages/contacto.html">Contacto</a></li> -->
+            </ul>
+        </nav>
+        <!-- menu resposive -->
+        <div class="buttons">
+        <a  class="btn btn-1" href="./pages/contacto.html" >Contacto</a>
+        </div>
+         <!--  Menu responsive -->
+        
+        <a onclick="openNav()" class="Menu_Res btn btn-1" href="#">Menu</a>
+    
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="#" style="color: #ffbc0e;">Inicio</a>
+                <a href="pages/conoceme.html">Conoceme</a>
+                <a href="pages/trabajos.html">Trabajos</a>
+                <a href="pages/contacto.html">Contacto</a>  
+            </div>
+        </div>
+    </header>
+        <!-- ********    FIN DE MENU  ********** -->
+
+        <!-- ********** Meti un javaScript  por que se me hizo mas facil y a manera
+                        de practica ******************* -->
+        <script type="text/javaScript" src="Menu_Responsi.js"></script>
+
+        <!-- *********   Contenido de la paginas  ****** -->
+    <main class="hero">
+        <div class="info-content">
+            <h3 style="color: #ffffff;">Dearrollador web</h3>
+            <h2>Hola,</h2>
+            <h2 style="color: azure;">Yo soy</h2>
+            <h1>Braulio Iñiguez</h1>
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo reiciendis eius voluptatibus voluptatum magni, fugit sequi totam saepe quod quae. Repellendus expedita praesentium impedit, sed quis error tempora voluptatem commodi?</p>
+            <a href="/pages/conoceme.html" class="btn3">Saber mas</a>
+            
+     </div>
+    </main>
+        <!-- ********  FIN DE CONTENIDO PRINCIPAL -->
+        <footer class="footer">
+            <div class="listen-online">
+                <i class="fa-solid fa-keyboard"></i>
+                <h2>ejemplo</h2>
+            </div>
+            <div class="follow-me">
+                <h2>Follow Me</h2>
+            </div>
+            <div class="social-network">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </footer>
+    
+    <!-- fin de contenido principal -->
+</body>
+</html>

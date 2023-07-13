@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans:wght@300&family=Raleway:wght@200&family=Roboto:wght@300&display=swap');
+
+/* google fonts */
+/* 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; 
+font-family: 'Nunito', sans-serif;
+*/
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color:rgb(255, 255, 255);
+    overflow-x: hidden; 
+}
+/*---------------------------------------------------------------
+*********   M   E   N   U   PRINCIPAL *****************
+-----------------------------------------------*/
+/* cabecera 'header' */
+.cabecera {
+    display: flex;
+	background-color: forestgreen;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 3%;
+    background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .9)) ;
+}
+.cabecera .logo{
+    cursor: pointer;
+}
+
+.cabecera .logo img{
+	height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+/* animacion al logo */
+.cabecera .logo img:hover{
+    transform: scale(1.2);
+}
+/* quitamos los puntitos de la lista */
+.cabecera .nav-links{
+    list-style: none;
+}
+/* Pasar el mouse y se hace amarillo  */
+.cabecera .nav-links a:hover{
+    color: #ffbc0e;
+}
+/* acomodamos los link en forma horizontal */
+.cabecera .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+/* animacion a los links */
+.cabecera .nav-links li:hover,
+.overlay a:hover{
+    transform: scale(1.3);
+
+}
+.cabecera .nav-links a{
+    font-size: 20px;
+    font-weight: 1100;
+    color: #eceff1;
+    
+}
+.cabecera.nav-links li a:hover{
+    color: #ffbc0e;
+}
+
+.Menu_Res{
+    display: none;
+}
+/*----------------------------------------------------------*/
+/*    Estilos al boton */
+/* reutilice los estilos para el boton menu respons */
+.cabecera .btn .btn-1, 
+.cabecera .Menu_Res .btn-1{
+    font-weight: 700;
+
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+.cabecera .btn .btn-1:hover,
+.cabecera .Menu_Res .btn-1:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+@media screen and (max-width: 800px) {
+    .nav-links, .btn{
+        display: none;
+    }
+    .Menu_Res{
+        display: inherit;
+    } 
+}
+/* aqui probe otro estilos de boton */
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+ .btn{
+    text-decoration: none;
+    padding: 15px 29px;
+    font-size: 15px;
+    position: relative;
+    margin: 11px;
+} 
+/*btn-1 */
+.btn-1{
+    background: #3182e6;
+    color: #ffff;
+    border-radius: 30px;
+    transition: tranform 0.3s ease;
+}
+.btn-1::after, .btn-1::before{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #3182e6;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: tranform 0.3s ease;
+}
+.btn-1:hover{
+    transform: translate(-12px, -12px);
+}
+.btn-1:hover::after{
+    transform: translate(6px, 6px);
+}
+.btn-1:hover::before{
+    transform: translate(12px, 12px);
+} 
+/*----------------------------------------------------*/
+/* *************** M E N U RESPONSIVE *********************
+-----------------------------------------------------*/
+/* Aqui agregare estilos para hacer el menu resposive */
+.cabecera a{
+    text-decoration: none;  
+    /*borramos el que teniamos en .header .nav-links a*/ 
+}
+
+.cabecera .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.cabecera .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.cabecera .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+/* efectos */
+.cabecera .overlay a:hover, 
+.cabecera .overlay a:focus{
+    color: #ffbc0e;
+}
+
+.cabecera .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+    .cabecera .overlay a{
+        font-size: 20px;
+    }
+    .cabecera .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/*-------------------------------------------------------*/
+/********************************************************/
+
+/* h1{
+    font-family: 'Roboto', sans-serif; 
+} */
+/* Colores a las letras y cotenido principal del indez */
+/* .index_principal{
+    font-size: 4rem;
+}
+.titu_verde{
+    color: forestgreen;
+}
+/* definir cuanto espacio de la pantalla */
+/* .index_principal{
+    height: 380px;
+}  */
+/*********   PAGINA INDEX ***********/
+.hero{
+    height: 88vh;
+    background-image: linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .9)) , url(../img/Zebras.jpg) ;
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(8, 1fr);
+    position: relative;
+}
+.hero .info-content{
+    grid-column: 7/10;
+    grid-row: 2/7;
+    color: #fdfdfd;
+}
+.hero h3{
+    font-family: 'Roboto', sans-serif, sans-serif;
+    font-size: 1.7em;
+    font-weight: 300;
+}
+.hero h1{
+    font-size: 5em;
+    color: #1bdf39;
+    font-family: 'Nunito', sans-serif;
+}
+.hero p{
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif, sans-serif;
+    margin-bottom: 22px;
+}
+/* boton de index 'hero'- 'Saber mas' */
+.hero .btn3{
+    font-size: 1em;
+    background: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1.5px solid #1bdf39;
+    border-radius: 30px;
+    margin-top: 13px;
+    text-decoration: none;
+}
+    .hero .btn3:hover{
+        background-color: #17b62f;
+    }
+
+/*----------------------------------------------*/
+/* poner color al footer me ayuda a saber donde se ubica */
+/************** F   O   O   T   E   R   **************
+-------------------------------------------------------- */
+.footer{
+   display: grid;
+   height: 40px;
+   align-items: center;
+   /* background-color: #181818; */
+   color: #fbfbfb;
+   grid-template-areas:
+   "listen-online follow-me social-network" ;
+   background-image: linear-gradient(rgba(3, 11, 4, 5), rgba(3, 20, 7, 9));
+   font-family: 'Nunito', sans-serif;
+   font-weight: 500;
+    
+}
+.footer .listen-online{
+    grid-template-areas: listen-online;
+    display: flex;
+    justify-content: center;
+    background-color: #18371e;
+    padding: 4px;
+}
+.footer .listen-online .fa-keyboard{
+    font-size: 1.9em;
+    margin-right: 11px;
+}
+
+.footer .follow-me{
+    grid-template-areas: follow-me;
+    text-align: center;
+
+}
+/*-------------------------------------------------
+/* ********* session de contacto  ********
+---------------------------------------------------*/
+:root{
+    --ColorTitulo: #000000;
+    --BordeInput: 1.5px solid #17b62f; 
+    --BotonFormulario: #3182e6;
+}
+.body_cont{
+    font-family:'lato', sans-serif;
+}
+.main_conta{
+    background-image: linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .9)) , url(../img/fondo_index_2.png) ;
+    background-size: cover;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.contact_form{
+    height: auto;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #bce8be;
+    -webkit-box-shadow: 0px 0px 14px -1px rgba(113,127,193,1);
+    -moz-box-shadow: 0px 0px 14px -1px rgba(113,127,193,1);
+    box-shadow: 0px 0px 14px -1px rgba(113,127,193,1);
+} 
+input{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    border: var(--BordeInput);
+    margin-top: 10;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+textarea{
+    background-color: #fbfbfb;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    border: var(--BordeInput);
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+label{
+    display: block;
+    float: center;
+}
+button{
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color:#3182e6;
+    border: var(--BordeInput);
+    border-radius: 20px;
+    width: 25%;
+    cursor: pointer;
+}
+button p{
+    color: #fff;
+}
+span{
+    color: #732460;
+}
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200&family=Roboto:wght@300& display=swap" rel="stylesheet">
+    <!-- css  -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logo_icon.ico">
+    <title>Contactos</title>
+</head>
+<body>
+    <div class="body_cont">
+      <!-- inicio de cabecera -->
+      <header class="cabecera">
+        <!-- logo -->
+        <div class="logo">
+            <img src="../img/logo.png" alt="logo_Principal">
+        </div>
+        <!-- ***********   INICIA EL MENU ******-->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="/pages/conoceme.html">Conoceme</a></li>
+                <li><a href="/pages/trabajos.html">Trabajos</a></li>
+                <!-- <li><a href="pages/contacto.html">Contacto</a></li> -->
+            </ul>
+        </nav>
+        <!-- menu resposive -->
+        <div class="buttons">
+        <a  class="btn btn-1" href="./contacto.html" >Contacto</a>
+        </div>
+        <!--  Menu responsive -->
+        
+        <a onclick="openNav()" class="Menu_Res btn btn-1" href="#">Menu</a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="../index.html" >Inicio</a>
+                <a href="./conoceme.html">Conoceme</a>
+                <a href="./trabajos.html">Trabajos</a>
+                <a href="./contacto.html" style="color: #ffbc0e;">Contacto</a>  
+            </div>
+        </div>
+    </header>
+        <!-- ********    FIN DE MENU  ********** -->
+    <!-- ********** Meti un javaScript  por que se me hizo mas facil y a manera
+            de practica ******************* -->
+            <script type="text/javaScript" src="../Menu_Responsi.js"></script>
+
+        <!-- *********   Contenido de la paginas  ****** -->
+    <main class="main_conta">
+        <!-- formulario de contacto
+        -------------------------------------------- -->
+       <div class="contact_form">
+        <div class="formulario">
+            <h1>Formulario</h1>
+            <form action="submeter-formularios.php" method="post">
+                <p>
+                    <label for="nombre" class="colocar_nombre">Nombre
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                    placeholder="Escribe tu nombre">
+                </p>
+                <p>
+                    <label for="email" class="colocar_email">Email
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="email" name="introducir_email" id="email" required="obligatorio"
+                    placeholder="Escribe tu email">
+                </p>
+                <p>
+                    <label for="website" class="colocar_website">Sitio web
+                    </label>
+                    <input type="url" name="introducir_website" id="website"
+                    placeholder="Escribe la URL de tu web">
+                </p>
+                <p>
+                    <label for="asunto" class="colocar_asunto">Asunto
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_asunto" id="asunto" required="obligatorio"
+                    placeholder="Escribe un asunto">
+                </p>
+                <p>
+                    <label for="mensaje" class="colocar_mensaje">Mensaje
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <textarea type="text" name="introducir_mensaje" class="texto_mensaje" id="nombre" required="obligatorio"
+                    placeholder="Deja aquí tu comentario..."></textarea>
+                </p>
+                
+                <button  type="submit" name="enviar_formulario" id="enviar">
+                    <p>Enviar</p>
+                </button>
+                
+                <p class="aviso">
+                    <span class="obligatorio">*</span>Los campos son obigatorios.
+                </p>
+
+            </form>
+        </div>
+       </div>
+    </main>
+</div>
+        <!-- ********  FIN DE CONTENIDO PRINCIPAL -->
+        <footer class="footer">
+            <div class="listen-online">
+                <i class="fa-solid fa-keyboard"></i>
+                <h2>ejemplo</h2>
+            </div>
+            <div class="follow-me">
+                <h2>follow me</h2>
+            </div>
+            <div class="social-network">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </footer>
+
+    <!-- fin de contenido principal -->
+</body>
+</html>

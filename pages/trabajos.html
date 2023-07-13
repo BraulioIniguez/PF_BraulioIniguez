@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200&family=Roboto:wght@300& display=swap" rel="stylesheet">
+    <!-- css  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logo_icon.ico">
+    <title>Trabajos</title>
+</head>
+<body>
+       <!-- inicio de cabecera -->
+       <header class="cabecera">
+        <!-- logo -->
+        <div class="logo">
+            <img src="../img/logo.png" alt="logo_Principal">
+        </div>
+        <!-- ***********   INICIA EL MENU ******-->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="/pages/conoceme.html">Conoceme</a></li>
+                <li><a href="/pages/trabajos.html" style="color:#ffbc0e;">Trabajos</a></li>
+                <!-- <li><a href="pages/contacto.html">Contacto</a></li> -->
+            </ul>
+        </nav>
+        <!-- menu resposive -->
+        <div class="buttons">
+        <a  class="btn btn-1" href="../pages/contacto.html" >Contacto</a>
+        </div>
+         <!--  Menu responsive -->
+        
+        <a onclick="openNav()" class="Menu_Res btn btn-1" href="#">Menu</a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="../index.html" >Inicio</a>
+                <a href="./conoceme.html">Conoceme</a>
+                <a href="./trabajos.html" style="color: #ffbc0e;">Trabajos</a>
+                <a href="./contacto.html">Contacto</a>  
+            </div>
+        </div>
+    </header>
+        <!-- ********    FIN DE MENU  ********** -->
+    <!-- ********** Meti un javaScript  por que se me hizo mas facil y a manera
+            de practica ******************* -->
+            <script type="text/javaScript" src="../Menu_Responsi.js"></script>
+
+        <!-- *********   Contenido de la paginas  ****** -->
+    <main>
+        <section class="index_principal">
+ 
+
+        </section>
+        <!-- ********  FIN DE CONTENIDO PRINCIPAL -->
+        <footer class="footer">
+            <h4>Braulio Daniel Iñiguez M.</h4>
+            <p>Todos los derechos reservados</p>
+                <ul>
+                    <li><a>Facebook</a>
+                    <li><a>Linkedln</a></li>
+                    <li><a>GitHub</a></li>
+                </ul>
+        </footer>
+    </main>
+    <!-- fin de contenido principal -->
+</body>
+</html>
