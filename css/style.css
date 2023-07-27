@@ -34,7 +34,7 @@ body{
 	background-color: rgb(58, 60, 58);
     justify-content: space-between;
     align-items: center;
-    height: 85px;
+    height: 75px;
     padding: 5px 3%;
     background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .9)) ;
 }
@@ -216,22 +216,7 @@ body{
 }
 
 /*-------------------------------------------------------*/
-/********************************************************/
 
-/* h1{
-    font-family: 'Roboto', sans-serif; 
-} */
-/* Colores a las letras y cotenido principal del indez */
-/* .index_principal{
-    font-size: 4rem;
-}
-.titu_verde{
-    color: forestgreen;
-}
-/* definir cuanto espacio de la pantalla */
-/* .index_principal{
-    height: 380px;
-}  */
 /*********   PAGINA INDEX ***********/
 .hero{
     height: 88vh;
@@ -284,7 +269,6 @@ body{
 -------------------------------------------------------- */
 .footer{
    display: grid;
-   height: 40px;
    align-items: center;
    /* background-color: #181818; */
    color: #fbfbfb;
@@ -299,11 +283,11 @@ body{
     grid-template-areas: listen-online;
     display: flex;
     justify-content: center;
-    background-color: #18371e;
+    background: #000;
     padding: 4px;
 }
-.footer .listen-online .fa-keyboard{
-    font-size: 1.9em;
+.footer .listen-online .fa-github{
+    font-size: 1.5em;
     margin-right: 11px;
 }
 
@@ -457,7 +441,7 @@ a {
 .container_trabajos{
 	max-width: 1300px;
 	margin: 0 auto;
-
+    padding: 0 30px;
 }
 
 /* uso de Grid */
@@ -475,12 +459,14 @@ a {
 	flex-direction: column;
 	justify-content: end;
 	font-size: 19px;
-   font-weight: 500;
+    font-weight: 500;
 }
 
 .item:hover{
     transform: scale(1.1);
+    transition: .1s;
 }
+
 
 .item a {
 	width: 120px;
@@ -490,6 +476,7 @@ a {
 .item a:hover{
     transform: scale(1);
     color: var(--colorNaranja);
+    transition: .5s;
 }
 
 .item3 a {
@@ -545,4 +532,42 @@ a {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+
+/* trabajos_1 */
+.main_porfolio{
+    width: 105%;
+    height: calc(100vh - 77px);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+.portfolio {
+	padding: 60px 0;
+    
+    width: 70%;
+    height: 100%;
+}
+
+.porfolio h2 {
+	padding-bottom: 20px;
+}
+
+.portfolio img {
+	width: 35%;
+}
+
+.portfolio p {
+	width: 80%;
+}
+
+.aside{
+   background-image: url(../img/fondos-web.jpg);
+    width: 25%;
+    height: 100%;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    
 }
