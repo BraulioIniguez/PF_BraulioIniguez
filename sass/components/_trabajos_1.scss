@@ -1,0 +1,41 @@
+/* trabajos_1 */
+.main_porfolio{
+    width: 105%;
+    height: calc(100vh - 77px);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background-image:$ImagenDeFondo ;   
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    color: aliceblue;
+}
+.portfolio {
+	padding: 60px 0;
+    
+    width: 70%;
+    height: 100%;
+}
+
+.porfolio h2 {
+	padding-bottom: 20px;
+}
+
+.portfolio img {
+	width: 35%;
+}
+
+.portfolio p {
+	width: 80%;
+}
+
+.aside{
+   background-image: url(/img/fondos-web.jpg);
+    width: 25%;
+    height: 100%;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    
+}

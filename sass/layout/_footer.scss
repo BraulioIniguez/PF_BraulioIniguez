@@ -1,0 +1,33 @@
+/* poner color al footer me ayuda a saber donde se ubica */
+/************** F   O   O   T   E   R   **************
+-------------------------------------------------------- */
+.footer{
+    display: grid;
+    align-items: center;
+    /* background-color: #181818; */
+    color: #fbfbfb;
+    grid-template-areas:
+    "listen-online follow-me social-network" ;
+    background-image: linear-gradient(rgba(3, 11, 4, 5), rgba(3, 20, 7, 9));
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+     
+    & .listen-online{
+        grid-template-areas: listen-online;
+        display: flex;
+        justify-content: center;
+        background: #000;
+        padding: 4px;
+    }
+    & .listen-online .fa-github{
+        font-size: 1.5em;
+        margin-right: 11px;
+    }
+    
+    & .follow-me{
+        grid-template-areas: follow-me;
+        text-align: center;
+    
+    }
+ }
+ 

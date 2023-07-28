@@ -1,0 +1,18 @@
+// base 'reset'
+@import './base/resets';
+// abstracts 'variables'
+@import './abstracts/variables';
+// base 'bases'
+@import './base/base';
+
+// layout 'header'
+@import './layout/header';
+@import './layout/footer';
+
+// components 'de las paginas'
+@import './components/index';
+@import './components/contacto';
+@import './components/conoceme';
+@import './components/trabajos';
+@import './components/trabajos_1';
+

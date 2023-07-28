@@ -1,0 +1,61 @@
+/*=============================================================*/
+/*   PAGINA       CONOCEME */
+/*=============================================================*/
+p {
+	font-size: 1rem;
+	margin: 10px 0;
+	line-height: 1.7em;
+}
+a {
+	text-decoration: none;
+}
+
+.btn_conoceme {
+	display: inline-block;
+	font-size: 15px;
+	padding: 12px 23px;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border-radius: 4px;
+}
+
+.btn-dark {
+	background: $colorDeBtn;
+	border: 1px solid $colorDeBtn;
+	color: #fff;
+}
+
+.btn-dark:hover {
+	background: #fff;
+	border: 2px solid #000;
+	color: #000;
+}
+
+#conoceme {
+    background-image: $ImagenDeFondo;
+    background-size: cover;
+}
+
+.conoceme-box {
+	display: flex;
+	padding: 50px 0;
+
+}
+
+.conoceme-box-image {
+	flex: 1;
+	text-align: center;
+	padding-right: 40px;
+}
+
+.conoceme-box-image img {
+	height: 200px;
+}
+
+.conoceme-box-description {
+	flex: 2;
+}
+.conoceme-box-description p{
+    color: #ffffff;
+}

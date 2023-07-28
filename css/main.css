@@ -1,0 +1,554 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans:wght@300&family=Raleway:wght@200&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+
+/* ---------------------------------------------------------------
+/*********   M   E   N   U   PRINCIPAL *****************
+        /* H   E   D   E   R
+/* -----------------------------------------------*/
+/* cabecera 'header' */
+.cabecera {
+  display: flex;
+  background-color: rgb(28, 30, 28);
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 5px 3%;
+  /* animacion al logo */
+  /* quitamos los puntitos de la lista */
+  /* Pasar el mouse y se hace amarillo  */
+  /* acomodamos los link en forma horizontal */
+  /* animacion a los links */
+}
+.cabecera .logo {
+  cursor: pointer;
+}
+.cabecera .logo img {
+  height: 70px;
+  width: auto;
+  transition: all 0.3s;
+}
+.cabecera .logo img:hover {
+  transform: scale(1.2);
+}
+.cabecera .nav-links {
+  list-style: none;
+}
+.cabecera .nav-links a:hover {
+  color: #ffbc0e;
+}
+.cabecera .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+.cabecera .nav-links li:hover,
+.cabecera .overlay a:hover {
+  transform: scale(1.3);
+}
+.cabecera .nav-links a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+.cabecera .nav-links li a:hover {
+  color: #ffbc0e;
+}
+
+.Menu_Res {
+  display: none;
+}
+
+/*----------------------------------------------------------*/
+/*    Estilos al boton */
+/* reutilice los estilos para el boton menu respons */
+.cabecera .btn .btn-1,
+.cabecera .Menu_Res .btn-1 {
+  font-weight: 700;
+  padding: 9px 25px;
+  background: #eceff1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3 ease 0s;
+}
+
+.cabecera .btn .btn-1:hover,
+.cabecera .Menu_Res .btn-1:hover {
+  background-color: #e2f1f8;
+  color: #ffbc0e;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px) {
+  .nav-links, .btn {
+    display: none;
+  }
+  .Menu_Res {
+    display: inherit;
+  }
+}
+/* aqui probe otro estilos de boton */
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 15px 29px;
+  font-size: 15px;
+  position: relative;
+  margin: 11px;
+}
+
+/*btn-1 */
+.btn-1 {
+  background: #ffbc0e;
+  color: white;
+  border-radius: 30px;
+  transition: tranform 0.3s ease;
+}
+.btn-1::after, .btn-1::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background: #ffbc0e;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: tranform 0.3s ease;
+}
+.btn-1:hover {
+  transform: translate(-12px, -12px);
+}
+.btn-1:hover::after {
+  transform: translate(6px, 6px);
+}
+.btn-1:hover::before {
+  transform: translate(12px, 12px);
+}
+
+/*----------------------------------------------------*/
+/* *************** M E N U RESPONSIVE *********************
+-----------------------------------------------------*/
+/* Aqui agregare estilos para hacer el menu resposive */
+.cabecera a {
+  text-decoration: none;
+  /*borramos el que teniamos en .header .nav-links a*/
+}
+
+.cabecera .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(33, 49, 63, 0.95);
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  /* efectos de menu en pantalla chica */
+}
+.cabecera .overlay .overlay-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cabecera .overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  color: #eceff1;
+}
+.cabecera .overlay a:hover, .cabecera .overlaya:focus {
+  color: #ffbc0e;
+}
+.cabecera .overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+}
+@media screen and (max-height: 450px) {
+  .cabecera .overlay a {
+    font-size: 20px;
+  }
+  .cabecera .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* poner color al footer me ayuda a saber donde se ubica */
+/************** F   O   O   T   E   R   **************
+-------------------------------------------------------- */
+.footer {
+  display: grid;
+  align-items: center;
+  /* background-color: #181818; */
+  color: #fbfbfb;
+  grid-template-areas: "listen-online follow-me social-network";
+  background-image: linear-gradient(rgb(3, 11, 4), rgb(3, 20, 7));
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+}
+.footer .listen-online {
+  grid-template-areas: listen-online;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 4px;
+}
+.footer .listen-online .fa-github {
+  font-size: 1.5em;
+  margin-right: 11px;
+}
+.footer .follow-me {
+  grid-template-areas: follow-me;
+  text-align: center;
+}
+
+/*-------------------------------------------------------*/
+/*********   PAGINA INDEX ***********/
+.hero {
+  height: 88vh;
+  background-image: linear-gradient(rgba(16, 16, 16, 0.8), rgba(16, 16, 16, 0.9)), url(/img/Zebras.jpg);
+  background-size: cover;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  position: relative;
+  /* boton de index 'hero'- 'Saber mas' */
+}
+.hero .info-content {
+  grid-column: 7/10;
+  grid-row: 2/7;
+  color: #fdfdfd;
+}
+.hero h3 {
+  font-family: "Roboto", sans-serif, sans-serif;
+  font-size: 1.7em;
+  font-weight: 300;
+}
+.hero h1 {
+  font-size: 5em;
+  color: #1bdf39;
+  font-family: "Nunito", sans-serif;
+}
+.hero p {
+  font-weight: 300;
+  font-family: "Roboto", sans-serif, sans-serif;
+  margin-bottom: 22px;
+}
+.hero .btn3 {
+  font-size: 1em;
+  background: none;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1.5px solid #1bdf39;
+  border-radius: 30px;
+  margin-top: 13px;
+  text-decoration: none;
+}
+.hero .btn3:hover {
+  background-color: #1bdf39;
+}
+
+/*-------------------------------------------------
+/* ********* session de contacto  ********
+---------------------------------------------------*/
+.body_cont {
+  font-family: "lato", sans-serif;
+}
+
+.main_conta {
+  background-image: linear-gradient(rgba(15, 26, 15, 0.8), rgba(29, 49, 19, 0.9)), url(/img/Zebras.jpg);
+  background-size: cover;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.contact_form {
+  height: auto;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(30, 58, 30, 0.6862745098);
+  box-shadow: 0px 0px 14px -1px rgb(61, 172, 69);
+  color: #e2f1f8;
+}
+
+input {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+  border: 2.5px solid #1bdf39;
+  margin-top: 10;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  background-color: #fbfbfb;
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+  border: 2.5px solid #1bdf39;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+
+label {
+  display: block;
+  float: center;
+}
+
+button {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #3182e6;
+  border: 2.5px solid #1bdf39;
+  border-radius: 20px;
+  width: 25%;
+  cursor: pointer;
+}
+
+button p {
+  color: #fff;
+}
+
+span {
+  color: #732460;
+}
+
+/*=============================================================*/
+/*   PAGINA       CONOCEME */
+/*=============================================================*/
+p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  line-height: 1.7em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn_conoceme {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 23px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.btn-dark {
+  background: forestgreen;
+  border: 1px solid forestgreen;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+}
+
+#conoceme {
+  background-image: linear-gradient(rgba(16, 16, 16, 0.8), rgba(16, 16, 16, 0.9)), url(/img/Zebras.jpg);
+  background-size: cover;
+}
+
+.conoceme-box {
+  display: flex;
+  padding: 50px 0;
+}
+
+.conoceme-box-image {
+  flex: 1;
+  text-align: center;
+  padding-right: 40px;
+}
+
+.conoceme-box-image img {
+  height: 200px;
+}
+
+.conoceme-box-description {
+  flex: 2;
+}
+
+.conoceme-box-description p {
+  color: #ffffff;
+}
+
+/*=============================================================*/
+/*   PAGINA      T R A B A J O S */
+/*=============================================================*/
+.page_trabajos {
+  background-image: linear-gradient(rgba(16, 16, 16, 0.8), rgba(16, 16, 16, 0.9)), url(/img/Zebras.jpg);
+  background-size: cover;
+}
+
+.container_trabajos {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* uso de Grid */
+.trabajos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(250px, auto);
+}
+
+.item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-size: 19px;
+  font-weight: 500;
+}
+.item:hover {
+  transform: scale(1.1);
+  transition: 0.1s;
+}
+.item a {
+  width: 120px;
+  color: #fff;
+}
+.item a:hover {
+  transform: scale(1);
+  color: #ffbc0e;
+  transition: 0.5s;
+}
+
+.item3 a {
+  width: 150px;
+}
+
+.item6 a {
+  width: 150px;
+}
+
+.item1 {
+  grid-column: 1;
+  grid-row: 1/2;
+  background: url("/img/fondos-para-páginas-web-11.jpg");
+}
+
+.item2 {
+  grid-column: 2;
+  grid-row: 1/2;
+  background: url("/img/fondos-web.jpg");
+}
+
+.item3 {
+  grid-column: 3/5;
+  grid-row: 1/3;
+  background: url("/img/fondo_index.png");
+}
+
+.item4 {
+  grid-column: 1;
+  grid-row: 2;
+  background: url("/img/fondos-para-páginas-web-6.jpg");
+}
+
+.item5 {
+  grid-column: 2;
+  grid-row: 2;
+  background: url("/img/meta.png");
+}
+
+.item6 {
+  grid-column: 1/5;
+  grid-row: 3;
+  background: url("/img/Zebras.jpg");
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* trabajos_1 */
+.main_porfolio {
+  width: 105%;
+  height: calc(100vh - 77px);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-image: linear-gradient(rgba(16, 16, 16, 0.8), rgba(16, 16, 16, 0.9)), url(/img/Zebras.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: aliceblue;
+}
+
+.portfolio {
+  padding: 60px 0;
+  width: 70%;
+  height: 100%;
+}
+
+.porfolio h2 {
+  padding-bottom: 20px;
+}
+
+.portfolio img {
+  width: 35%;
+}
+
+.portfolio p {
+  width: 80%;
+}
+
+.aside {
+  background-image: url(/img/fondos-web.jpg);
+  width: 25%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=main.css.map */

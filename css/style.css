@@ -18,6 +18,10 @@ font-family: 'Nunito', sans-serif;
     --BotonFormulario: #3182e6;
     --colorDeBtn: forestgreen;
     --colorNaranja: #ffbc0e;
+    --colorGradiente: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .9)) ;
+    --ImagenDeFondo: linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .9)) , url(../img/Zebras.jpg);
+
+
 
 }
 body{
@@ -27,6 +31,7 @@ body{
 }
 /*---------------------------------------------------------------
 *********   M   E   N   U   PRINCIPAL *****************
+         H   E   D   E   R
 -----------------------------------------------*/
 /* cabecera 'header' */
 .cabecera {
@@ -36,7 +41,7 @@ body{
     align-items: center;
     height: 75px;
     padding: 5px 3%;
-    background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .9)) ;
+    background-image: var(--colorGradiente) ;
 }
 .cabecera .logo{
     cursor: pointer;
@@ -73,11 +78,11 @@ body{
 .cabecera .nav-links a{
     font-size: 20px;
     font-weight: 1100;
-    color: #eceff1;
+    color: #f5f5f5;
     
 }
 .cabecera.nav-links li a:hover{
-    color: #ffbc0e;
+    color: var(--colorNaranja);
 }
 
 .Menu_Res{
@@ -101,7 +106,7 @@ body{
 .cabecera .btn .btn-1:hover,
 .cabecera .Menu_Res .btn-1:hover{
     background-color: #e2f1f8;
-    color: #ffbc0e;
+    color: var(--colorNaranja);
     transform: scale(1.1);
 }
 @media screen and (max-width: 800px) {
@@ -127,7 +132,7 @@ body{
 } 
 /*btn-1 */
 .btn-1{
-    background: #ffbc0e;
+    background: var(--colorNaranja);
     color: #ffff;
     border-radius: 30px;
     transition: tranform 0.3s ease;
@@ -136,7 +141,7 @@ body{
     content: "";
     position: absolute;
     opacity: 0.3;
-    background: #ffbc0e;
+    background: var(--colorNaranja);
     border-radius: inherit;
     width: 100%;
     height: 100%;
@@ -191,10 +196,10 @@ body{
     font-weight: 700;
     color: #eceff1;
 }
-/* efectos */
+/* efectos de menu en pantalla chica */
 .cabecera .overlay a:hover, 
 .cabecera .overlay a:focus{
-    color: #ffbc0e;
+    color: var(--colorNaranja)
 }
 
 .cabecera .overlay .close{
@@ -220,7 +225,7 @@ body{
 /*********   PAGINA INDEX ***********/
 .hero{
     height: 88vh;
-    background-image: linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .9)) , url(../img/Zebras.jpg) ;
+    background-image: var(--ImagenDeFondo);
     background-size: cover;
     max-width: 100%;
     display: grid;
@@ -240,7 +245,7 @@ body{
 }
 .hero h1{
     font-size: 5em;
-    color: #1bdf39;
+    color: var(--colorVerde);
     font-family: 'Nunito', sans-serif;
 }
 .hero p{
@@ -254,13 +259,13 @@ body{
     background: none;
     color: #fff;
     padding: 10px 20px;
-    border: 1.5px solid #1bdf39;
+    border: 1.5px solid var(--colorVerde);
     border-radius: 30px;
     margin-top: 13px;
     text-decoration: none;
 }
     .hero .btn3:hover{
-        background-color: #17b62f;
+        background-color: var(--colorVerde);
     }
 
 /*----------------------------------------------*/
@@ -304,7 +309,7 @@ body{
     font-family:'lato', sans-serif;
 }
 .main_conta{
-    background-image: linear-gradient(rgba(15, 26, 15, 0.8), rgba(29, 49, 19, 0.9)), url(../img/fondos-para-páginas-web-6.jpg)  ;
+    background-image: linear-gradient(rgba(15, 26, 15, 0.8), rgba(29, 49, 19, 0.9)), url(../img/Zebras.jpg)  ;
     background-size: cover;
     max-width: 100%;
     display: flex;
@@ -404,8 +409,8 @@ a {
 }
 
 #conoceme {
-    background-image: linear-gradient(rgba(15, 26, 15, 0.8), rgba(29, 49, 19, 0.9)), url(../img/fondos-para-páginas-web-6.jpg)  ;
- 
+    background-image: var(--ImagenDeFondo);
+    background-size: cover;
 }
 
 .conoceme-box {
@@ -435,8 +440,8 @@ a {
 /*   PAGINA      T R A B A J O S */
 /*=============================================================*/
 .page_trabajos{
-    background-image: linear-gradient(rgba(15, 26, 15, 0.8), rgba(29, 49, 19, 0.9)), url(../img/fondos-para-páginas-web-6.jpg)  ;
-
+    background-image: var(--ImagenDeFondo);
+    background-size: cover;
 }
 .container_trabajos{
 	max-width: 1300px;

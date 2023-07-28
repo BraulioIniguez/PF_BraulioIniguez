@@ -1,0 +1,53 @@
+/*-------------------------------------------------------*/
+
+/*********   PAGINA INDEX ***********/
+.hero{
+    height: 88vh;
+    background-image: $ImagenDeFondo;
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(8, 1fr);
+    position: relative;
+
+    & .info-content{
+        grid-column: 7/10;
+        grid-row: 2/7;
+        color: #fdfdfd;
+    }
+    & h3{
+        font-family: 'Roboto', sans-serif, sans-serif;
+        font-size: 1.7em;
+        font-weight: 300;
+    }
+    & h1{
+        font-size: 5em;
+        color: $colorVerde;
+        font-family: 'Nunito', sans-serif;
+    }
+    & p{
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif, sans-serif;
+        margin-bottom: 22px;
+    }
+    /* boton de index 'hero'- 'Saber mas' */
+    & .btn3{
+        font-size: 1em;
+        background: none;
+        color: #fff;
+        padding: 10px 20px;
+        border: 1.5px solid $colorVerde;
+        border-radius: 30px;
+        margin-top: 13px;
+        text-decoration: none;
+        
+    &:hover{
+            background-color:$colorVerde;
+        }
+    }
+}
+
+
+
+    
