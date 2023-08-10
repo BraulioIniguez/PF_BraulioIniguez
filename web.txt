@@ -1,0 +1,7 @@
+Nombre del dominio
+porfolioprueba-5551.free.nf
+
+contraseña
+3raulilio1
+comtraseña para colocar en el servidor de ´FileZilla'
+SHVfBRVKCj4mFg

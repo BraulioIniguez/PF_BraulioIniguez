@@ -244,6 +244,15 @@ body {
   grid-row: 2/7;
   color: #fdfdfd;
 }
+/* .slider-box{
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-template-rows: repeat(8, 1fr);
+position: relative;
+/* boton de index 'hero'- 'Saber mas' */
+/* } */ 
+
+
 .hero h3 {
   font-family: "Roboto", sans-serif, sans-serif;
   font-size: 1.7em;
@@ -486,7 +495,7 @@ a {
 .item4 {
   grid-column: 1;
   grid-row: 2;
-  background: url("/img/fondos-para-páginas-web-6.jpg");
+  background: url("/img/");
 }
 
 .item5 {
@@ -552,3 +561,95 @@ a {
   background-size: cover;
   background-position: center;
 }/*# sourceMappingURL=main.css.map */
+
+/*=============================================================*/
+/*   PAGINA      Carrucel*/
+/*=============================================================*/
+
+.slider-content {
+  display: grid;
+  grid-column: 2/6;
+  grid-row: 3/8;
+  color: #fdfdfd;
+  overflow: hidden;
+}
+.titulo{
+  text-align: center;
+  font-size: 10px; 
+  padding-top: 10px;
+}
+
+.slider-box{
+   width: 1280;
+   height: auto;
+   /* margin: 50px auto 0; */
+   overflow: hidden;
+}
+
+
+.slider-box ul{
+   display: flex;
+   padding: 0;
+   width: 400%;
+   animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li{
+   width: 100%;
+   list-style: none;
+   position: relative;
+}
+
+.texto{
+   position: absolute;
+   padding: 19px;
+   top: 180px;
+   color: #ffff;
+}
+
+.texto h2{
+   font-size: 25px;
+}
+
+.slider-box img{
+   width: 100%;
+}
+
+@keyframes slide {
+   0% { margin-left: 0; }
+   20% { margin-left: 0; }
+
+   25% { margin-left: -100%; }
+   45% { margin-left: -100%; }
+
+   50% { margin-left: -200%; }
+   70% { margin-left: -200%; }
+   
+   75% { margin-left: -300%; }
+   100% { margin-left: -300%; }    
+}
+
+@media(max-width:991px){
+
+   /* .body{
+       padding: 30px;
+   } */
+
+   .slider-box{
+       width: 100%;
+   }
+
+   .texto{
+       top: 50px;
+       padding: 0 25px;
+   }
+
+   .texto h2{
+       font-size: 35px;
+       margin-bottom: 15px;
+   }
+
+   .texto p{
+       font-size: 15px;
+   }
+}
