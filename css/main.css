@@ -538,7 +538,6 @@ a {
   flex-direction: column;
   justify-content: end;
   font-size: 19px;
-  font-weight: 500;
 }
 .item:hover {
   transform: scale(1.1);
@@ -546,7 +545,8 @@ a {
 }
 .item a {
   width: 120px;
-  color: #fff;
+  color: #ffffff;
+  font-weight: 700;
 }
 .item a:hover {
   transform: scale(1);
@@ -565,25 +565,25 @@ a {
 .item1 {
   grid-column: 1;
   grid-row: 1/2;
-  background: url("/img/NextCloud.jpg");
+  background: url("/img/web_ejemplo.jpg");
 }
 
 .item2 {
   grid-column: 2;
   grid-row: 1/2;
-  background: url("/img/slack.png");
+  background: url("/img/fondo_index.png");
 }
 
 .item3 {
   grid-column: 3/5;
   grid-row: 1/3;
-  background: url("/img/web-tesla.jpg");
+  background: url("/img/ejemplo_porfolio.jpg");
 }
 
 .item4 {
   grid-column: 1;
   grid-row: 2;
-  background: url("/img/ejemplo_porfolio.jpg");
+  background: url("/img/web-tesla.jpg");
 }
 
 .item5 {
@@ -595,7 +595,7 @@ a {
 .item6 {
   grid-column: 1/5;
   grid-row: 3;
-  background: url("/img/fondos-web.jpg");
+  background: url("/img/tienda de abarrotes.png");
 }
 
 .item1,
